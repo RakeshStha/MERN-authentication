@@ -116,7 +116,7 @@ exports.resetpassword = (req, res, next) => {
         user.resetPasswordToken = undefined;
         user.resetPasswordExpire = undefined;
         await user.save();
-
+      
         res.status(201).json({
             success: true,
             data: "Password reset Success"
